@@ -1,4 +1,4 @@
-const PopUser = () => {
+export const PopUser = () => {
     return (
         <div className="header__pop-user-set pop-user-set" id="user-set-target">
             {/* <!-- <a href="">x</a> --> */}
