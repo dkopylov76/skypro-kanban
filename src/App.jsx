@@ -2,8 +2,9 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import "./App.css";
+import CalendarContent from "./components/Calendar/CalendarContent";
 import CalendarNav from "./components/Calendar/CalendarNav";
-import PopUser from "./components/PopUser";
+import PopUser from "./components/PopUser/popUser";
 
 function App() {
 
@@ -62,7 +63,8 @@ function App() {
 												</div>
 											</div>
 										</div> */}
-										<div class="calendar__content">
+										<CalendarContent />
+										{/* <div class="calendar__content">
 											<div class="calendar__days-names">
 												<div class="calendar__day-name">пн</div>
 												<div class="calendar__day-name">вт</div>
@@ -109,7 +111,7 @@ function App() {
 												<div class="calendar__cell _cell-day _weekend">30</div>
 												<div class="calendar__cell _other-month _weekend">1</div>
 											</div>
-										</div>
+										</div> */}
 										
 										<input type="hidden" id="datepick_value" value="08.09.2023" />
 										<div class="calendar__period">
