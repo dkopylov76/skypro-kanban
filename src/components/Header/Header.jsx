@@ -1,4 +1,4 @@
-import PopUser from "../PopUser/PopUser";
+import PopUser from "../PopUps/PopUser";
 
 const Header = () => {
     return (
