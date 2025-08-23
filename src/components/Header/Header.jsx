@@ -1,4 +1,4 @@
-import PopUser from "./components/PopUser/popUser";
+import PopUser from "../PopUser/PopUser";
 
 const Header = () => {
     return (
