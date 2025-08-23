@@ -26,7 +26,6 @@ const PopNewCard = () => {
 									<div class="calendar__block">
 										<CalendarNav />
 										<CalendarContent />
-																				
 										<input type="hidden" id="datepick_value" value="08.09.2023" />
 										<div class="calendar__period">
 											<p class="calendar__p date-end">Выберите срок исполнения <span class="date-control"></span>.</p>
