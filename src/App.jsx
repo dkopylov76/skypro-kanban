@@ -2,6 +2,7 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import "./App.css";
+import CalendarNav from "./components/Calendar/CalendarNav";
 import PopUser from "./components/PopUser";
 
 function App() {
@@ -45,7 +46,8 @@ function App() {
 								<div class="pop-new-card__calendar calendar">
 									<p class="calendar__ttl subttl">Даты</p>									
 									<div class="calendar__block">
-										<div class="calendar__nav">
+										<CalendarNav />
+										{/* <div class="calendar__nav">
 											<div class="calendar__month">Сентябрь 2023</div>
 											<div class="nav__actions">
 												<div class="nav__action" data-action="prev">
@@ -59,7 +61,7 @@ function App() {
 													</svg>
 												</div>
 											</div>
-										</div>
+										</div> */}
 										<div class="calendar__content">
 											<div class="calendar__days-names">
 												<div class="calendar__day-name">пн</div>
