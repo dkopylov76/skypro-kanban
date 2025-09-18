@@ -10,12 +10,12 @@ function App() {
   return (
     <>
       <div class="wrapper">
-		<PopExit />
-		<PopNewCard />
-		<PopBrowse />
-		<Header />
-		<Main />
-    </div>
+        <PopExit />
+        <PopNewCard />
+        <PopBrowse />
+        <Header />
+        <Main />
+      </div>
 
     <script src="js/script.js"></script>
     </>
