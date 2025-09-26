@@ -1,4 +1,4 @@
-import cardList from "./data.js"
+import cardList from "./data.js";
 
 const CardsItemOrange = () => {
     return (
@@ -7,8 +7,8 @@ const CardsItemOrange = () => {
                 <div class="cards__card card">
                     <div class="card__group">
                         <div class="card__theme _orange">
-                            <p class="_orange">`${cardList.theme}`</p>
-                            {/* <p class="_orange">Web Design</p> */}
+                            {/* <p class="_orange">`${cardList.theme}`</p> */}
+                            <p class="_orange">Web Design</p>
                         </div>
                         <a href="#popBrowse" target="_self">
                             <div class="card__btn">
