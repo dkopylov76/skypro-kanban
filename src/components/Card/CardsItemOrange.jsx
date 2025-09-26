@@ -1,3 +1,5 @@
+import cardList from "../data.js"
+
 const CardsItemOrange = () => {
     return (
         <>
@@ -5,7 +7,8 @@ const CardsItemOrange = () => {
                 <div class="cards__card card">
                     <div class="card__group">
                         <div class="card__theme _orange">
-                            <p class="_orange">Web Design</p>
+                            <p class="_orange">`${cardList.theme}`</p>
+                            {/* <p class="_orange">Web Design</p> */}
                         </div>
                         <a href="#popBrowse" target="_self">
                             <div class="card__btn">
@@ -17,7 +20,7 @@ const CardsItemOrange = () => {
                     </div>
                     <div class="card__content">
                         <a href="" target="_blank">
-                            <h3 class="card__title">Название задачи</h3>
+                            <h3 class="card__title">`${cardList.title}`</h3>
                         </a>
                         <div class="card__date">
                             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">

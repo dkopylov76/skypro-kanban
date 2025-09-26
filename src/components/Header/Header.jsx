@@ -1,15 +1,14 @@
 import { useState } from "react";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import PopUser from "../PopUps/PopUser";
 
 const Header = () => {
-    function App() {
-        const [loading, setLoading] = useState(true);
-            useEffect(() => {
-                setTimeout(() => {
-                setLoading(false);
-            }, 3000);
-        }, []);
+    const [showModal, setShowModal] = useState(false);
+
+    const toggleShowModal = () => {
+        setShowModal(showModal);
+    };
+
     return (
         <>
             <header class="header">
@@ -24,14 +23,14 @@ const Header = () => {
                         <nav class="header__nav">
                             <button class="header__btn-main-new _hover01" id="btnMainNew"><a href="#popNewCard">Создать новую задачу</a></button>
                             <a href="#user-set-target" class="header__user _hover02">Ivan Ivanov</a>
-                            <PopUser loading={loading}/>
+                            <PopUser show={!showModal} onCloseButtonClick={toggleShowModal} />
+                            {/* <div className="button" onClick={toggleShowModal}>Открыть</div> */}
                         </nav>					
                     </div>
 			    </div>			
 		    </header>
         </>
     );
-}
 }
 
 export default Header;

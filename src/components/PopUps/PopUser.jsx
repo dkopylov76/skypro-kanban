@@ -1,4 +1,8 @@
-const PopUser = () => {
+const PopUser = ({ show, onCloseButtonClick }) => {
+    if (!show) {
+        return null;
+    }
+    
     return (
         <>
             <div className="header__pop-user-set pop-user-set" id="user-set-target">
@@ -9,10 +13,11 @@ const PopUser = () => {
                     <p>Темная тема</p>
                     <input type="checkbox" className="checkbox" name="checkbox" />
                 </div>
+                <button onClick={onCloseButtonClick}>Закрыть</button>
                 <button type="button" className="_hover03"><a href="#popExit">Выйти</a></button>
             </div>
         </>
     );
-}
+};
 
 export default PopUser;

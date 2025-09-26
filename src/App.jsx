@@ -4,9 +4,11 @@ import PopNewCard from "./components/PopUps/PopNewCard";
 import PopBrowse from "./components/PopUps/PopBrowse";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
+// import { useState } from "react";
 
 function App() {
-
+  // const [state, setState] = useState(initialState)
+  
   return (
     <>
       <div class="wrapper">
