@@ -1,4 +1,4 @@
-import cardList from "../data.js"
+import cardList from "./data.js"
 
 const CardsItemOrange = () => {
     return (
