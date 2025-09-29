@@ -1,5 +1,4 @@
 import { useState } from "react";
-// import { useEffect } from "react";
 import PopUser from "../PopUps/PopUser";
 
 const Header = () => {
@@ -24,7 +23,6 @@ const Header = () => {
                             <button class="header__btn-main-new _hover01" id="btnMainNew"><a href="#popNewCard">Создать новую задачу</a></button>
                             <a href="#user-set-target" class="header__user _hover02" onClick={toggleShowModal}>Ivan Ivanov</a>
                             <PopUser show={showModal} onCloseButtonClick={toggleShowModal} />
-                            {/* <div className="button" onClick={toggleShowModal}>Открыть</div> */}
                         </nav>					
                     </div>
 			    </div>			

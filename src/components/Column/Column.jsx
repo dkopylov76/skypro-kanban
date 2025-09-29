@@ -1,7 +1,7 @@
 import CardsItem from "../Card/CardsItem";
 
 const Column = ({header, cards}) => {
-    // for (let i = 0; i < cardList.length; ++i) {
+    
     return (
         <>
             <div class="main__column column">
@@ -15,6 +15,5 @@ const Column = ({header, cards}) => {
         </>
     );
 }
-// }
 
 export default Column;

@@ -4,11 +4,17 @@ import PopNewCard from "./components/PopUps/PopNewCard";
 import PopBrowse from "./components/PopUps/PopBrowse";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
-// import { useState } from "react";
+import { useState, useEffect } from 'react';
 
 function App() {
-  // const [state, setState] = useState(initialState)
-  
+  const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+      setTimeout(() => {
+        setLoading(false);
+      }, 3000);
+   }, [loading]);
+
   return (
     <>
       <div class="wrapper">
@@ -16,7 +22,7 @@ function App() {
         <PopNewCard />
         <PopBrowse />
         <Header />
-        <Main />
+        {loading ? (<div class="main__loading">Данные загружаются...</div>) : (<Main loading={loading}/>)}
       </div>
 
     <script src="js/script.js"></script>
@@ -24,4 +30,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

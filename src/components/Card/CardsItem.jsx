@@ -1,5 +1,3 @@
-// import cardsList from "/src/data.js";
-
 const CardsItem = ({id, theme, title, date}) => {
     const themeMap = {"Web Design":"orange", "Research":"green", "Copywriting":"purple"};
     const themeClass = themeMap[theme]
@@ -38,7 +36,6 @@ const CardsItem = ({id, theme, title, date}) => {
                                 </defs>
                             </svg>
                             <p> {date} </p>
-                            {/* <p> {cardsList[i].status} </p> */}
                         </div>
                     </div>
                 </div>
@@ -46,7 +43,5 @@ const CardsItem = ({id, theme, title, date}) => {
         </>
         )
     }
-// )
-// }
 
 export default CardsItem;

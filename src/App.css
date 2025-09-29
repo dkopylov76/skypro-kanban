@@ -810,6 +810,16 @@ body {
   margin: 0 auto;
   display: block;
 }
+.main__loading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+}
 
 .column__title {
   padding: 0 10px;
