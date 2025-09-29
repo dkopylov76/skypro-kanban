@@ -1,8 +1,7 @@
-import ColumnNoStatus from "../Column/ColumnNoStatus";
-import ColumnMustDo from "../Column/ColumnMustDo";
-import ColumnInWork from "../Column/ColumnInWork";
-import ColumnTesting from "../Column/ColumnTesting";
-import ColumnReady from "../Column/ColumnReady";
+import Column from "../Column/Column";
+import cardsList from "/src/data.js";
+
+const columnHeaders = ["Без статуса", "В работе", "Нужно сделать", "Тестирование", "Готово"]
 
 const Main = () => {
     return (
@@ -12,11 +11,7 @@ const Main = () => {
                     
                     <div class="main__block">
                         <div class="main__content">
-                            <ColumnNoStatus />
-                            <ColumnMustDo />
-                            <ColumnInWork />
-                            <ColumnTesting />
-                            <ColumnReady />
+                            {columnHeaders.map((header, index) => (<Column key={`${header}_${index}`} header={header} cards={cardsList.filter((card) => card.status === header)}/>))}
                         </div>
                     
                     </div>

@@ -4,50 +4,50 @@ import CalendarNav from "../Calendar/CalendarNav";
 const PopNewCard = () => {
     return (
         <>
-            <div class="pop-new-card" id="popNewCard">
-				<div class="pop-new-card__container">
-					<div class="pop-new-card__block">
-						<div class="pop-new-card__content">
-							<h3 class="pop-new-card__ttl">Создание задачи</h3>
-							<a href="#" class="pop-new-card__close">&#10006;</a>
-							<div class="pop-new-card__wrap">
-								<form class="pop-new-card__form form-new" id="formNewCard" action="#">
-									<div class="form-new__block">
-										<label for="formTitle" class="subttl">Название задачи</label>
-										<input class="form-new__input" type="text" name="name" id="formTitle" placeholder="Введите название задачи..." autofocus />
+            <div className="pop-new-card" id="popNewCard">
+				<div className="pop-new-card__container">
+					<div className="pop-new-card__block">
+						<div className="pop-new-card__content">
+							<h3 className="pop-new-card__ttl">Создание задачи</h3>
+							<a href="#" className="pop-new-card__close">&#10006;</a>
+							<div className="pop-new-card__wrap">
+								<form className="pop-new-card__form form-new" id="formNewCard" action="#">
+									<div className="form-new__block">
+										<label htmlFor="formTitle" className="subttl">Название задачи</label>
+										<input className="form-new__input" type="text" name="name" id="formTitle" placeholder="Введите название задачи..." autofocus />
 									</div>
-									<div class="form-new__block">
-										<label for="textArea" class="subttl">Описание задачи</label>
-										<textarea class="form-new__area" name="text" id="textArea"  placeholder="Введите описание задачи..."></textarea>
+									<div className="form-new__block">
+										<label htmlFor="textArea" className="subttl">Описание задачи</label>
+										<textarea className="form-new__area" name="text" id="textArea"  placeholder="Введите описание задачи..."></textarea>
 									</div>
 								</form>
-								<div class="pop-new-card__calendar calendar">
-									<p class="calendar__ttl subttl">Даты</p>									
-									<div class="calendar__block">
+								<div className="pop-new-card__calendar calendar">
+									<p className="calendar__ttl subttl">Даты</p>									
+									<div className="calendar__block">
 										<CalendarNav />
 										<CalendarContent />
 										<input type="hidden" id="datepick_value" value="08.09.2023" />
-										<div class="calendar__period">
-											<p class="calendar__p date-end">Выберите срок исполнения <span class="date-control"></span>.</p>
+										<div className="calendar__period">
+											<p className="calendar__p date-end">Выберите срок исполнения <span className="date-control"></span>.</p>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="pop-new-card__categories categories">
-								<p class="categories__p subttl">Категория</p>
-								<div class="categories__themes">
-									<div class="categories__theme _orange _active-category">
-										<p class="_orange">Web Design</p>
+							<div className="pop-new-card__categories categories">
+								<p className="categories__p subttl">Категория</p>
+								<div className="categories__themes">
+									<div className="categories__theme _orange _active-category">
+										<p className="_orange">Web Design</p>
 									</div>
-									<div class="categories__theme _green">
-										<p class="_green">Research</p>
+									<div className="categories__theme _green">
+										<p className="_green">Research</p>
 									</div>
-									<div class="categories__theme _purple">
-										<p class="_purple">Copywriting</p>
+									<div className="categories__theme _purple">
+										<p className="_purple">Copywriting</p>
 									</div>
 								</div>
 							</div>
-							<button class="form-new__create _hover01" id="btnCreate">Создать задачу</button>
+							<button className="form-new__create _hover01" id="btnCreate">Создать задачу</button>
 						</div>
 					</div>
 				</div>

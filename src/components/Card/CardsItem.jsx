@@ -1,60 +1,17 @@
-import cardsList from "/src/data.js";
+// import cardsList from "/src/data.js";
 
-// const CardsItemGreen = () => {
-// for (let i = 0; i < cardList.length; ++i) {
-//     return (
-//     <>
-//     <div> {cardList[i].id} </div>    
-//     // console.log(cardList[i].id);
-//     <p class="_green"> {cardList[i].theme} </p>
-//     {/* console.log(cardList[i].theme); */}
-//     <h3 class="card__title"> {cardList[i].title} </h3>
-//     {/* console.log(cardList[i].title); */}
-//     <p> {cardList[i].date} </p>
-//     <p> {cardList[i].status} </p>
-//     {/* console.log(cardList[i].date);
-//     console.log(cardList[i].status); */}
-//     </>
-//     )
-// }
-// }
-// export default CardsItemGreen;
-
-// cardsList.forEach((card) => {
-//     console.log(card)
-// });
-
-for (const card of cardsList) {
-    console.log(card)
-};
-
-function создатьКалькулятор() {
-    return {
-        сложить: function(a, b) {
-            return a + b;
-        },
-        вычесть: function(a, b) {
-            return a - b;
-        }
-    }
-}
-
-const калькулятор = создатьКалькулятор();
-console.log(калькулятор.вычесть(5, 3));
-
-
-
-const CardsItemGreen = () => {
-    for (let i = 5; i < cardsList.length; ++i) {
-        
-    return (
+const CardsItem = ({id, theme, title, date}) => {
+    const themeMap = {"Web Design":"orange", "Research":"green", "Copywriting":"purple"};
+    const themeClass = themeMap[theme]
+                
+        return (
         <>
             <div class="cards__item">
                 <div class="cards__card card">
-                    <div> {cardsList[i].id} </div>
+                    <div>{id}</div>
                     <div class="card__group">
-                        <div class="card__theme _green">
-                            <p class="_green"> {cardsList[i].theme} </p>
+                        <div class={`card__theme _${themeClass}`}>
+                            <p class={`_${themeClass}`}> {theme} </p>
                         </div>
                         <a href="#popBrowse" target="_self">
                             <div class="card__btn">
@@ -66,7 +23,7 @@ const CardsItemGreen = () => {
                     </div>
                     <div class="card__content">
                         <a href="" target="_blank">
-                            <h3 class="card__title"> {cardsList[i].title} </h3>
+                            <h3 class="card__title"> {title} </h3>
                         </a>
                         <div class="card__date">
                             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
@@ -80,15 +37,16 @@ const CardsItemGreen = () => {
                                     </clipPath>
                                 </defs>
                             </svg>
-                            <p> {cardsList[i].date} </p>
-                            <p> {cardsList[i].status} </p>
+                            <p> {date} </p>
+                            {/* <p> {cardsList[i].status} </p> */}
                         </div>
                     </div>
                 </div>
             </div>
         </>
-    );
-}
-}
+        )
+    }
+// )
+// }
 
-export default CardsItemGreen;
+export default CardsItem;
