@@ -6,6 +6,18 @@ const SHeader = styled.header`
   background-color: #FFFFFF;
 `;
 
-export default SHeader;
+const SBlock = styled.block`
+  height: 70px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 0 10px;
+`;
 
-//  { Button, Input, Title };
+export { SHeader, SBlock };
+
+// //  { Button, Input, Title };

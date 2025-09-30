@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PopUser from "../PopUps/PopUser";
-import { SHeader } from "./Header.styled";
+import { SHeader, SBlock } from "./Header.styled";
 
 const Header = () => {
     const [showModal, setShowModal] = useState(false);
@@ -14,7 +14,8 @@ const Header = () => {
             <SHeader>
             {/* <header class="header"> */}
 			    <div class="container">
-                    <div class="header__block">
+                    <SBlock>
+                    {/* <div class="header__block"> */}
                         <div class="header__logo _show _light">
                             <a href="" target="_self"><img src="images/logo.png" alt="logo" /></a>
                         </div>
@@ -26,7 +27,8 @@ const Header = () => {
                             <a href="#user-set-target" class="header__user _hover02" onClick={toggleShowModal}>Ivan Ivanov</a>
                             <PopUser show={showModal} onCloseButtonClick={toggleShowModal} />
                         </nav>					
-                    </div>
+                    </SBlock>
+                    {/* </div> */}
 			    </div>			
 		    </SHeader>
             {/* </header> */}
