@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PopUser from "../PopUps/PopUser";
+import { SHeader } from "./Header.styled";
 
 const Header = () => {
     const [showModal, setShowModal] = useState(false);
@@ -10,7 +11,8 @@ const Header = () => {
 
     return (
         <>
-            <header class="header">
+            <SHeader>
+            {/* <header class="header"> */}
 			    <div class="container">
                     <div class="header__block">
                         <div class="header__logo _show _light">
@@ -26,7 +28,8 @@ const Header = () => {
                         </nav>					
                     </div>
 			    </div>			
-		    </header>
+		    </SHeader>
+            {/* </header> */}
         </>
     );
 }
