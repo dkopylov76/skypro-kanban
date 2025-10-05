@@ -1,13 +1,25 @@
 import Column from "../Column/Column";
 import cardsList from "/src/data.js";
+import {
+  MainBlock,
+  Container,
+  HeaderBlock,
+  LogoWrapper,
+  Logo,
+  HeaderNav,
+  MainButton,
+  UserLink
+} from './Main.styled';
 
 const columnHeaders = ["Без статуса", "В работе", "Нужно сделать", "Тестирование", "Готово"]
 
 const Main = () => {
     return (
         <>
-            <main class="main">
-                <div class="container">
+            <MainBlock>
+            {/* <main class="main"> */}
+                <Container>
+                {/* <div class="container"> */}
                     
                     <div class="main__block">
                         <div class="main__content">
@@ -15,8 +27,10 @@ const Main = () => {
                         </div>
                     
                     </div>
-                </div>
-            </main>
+                </Container>
+                {/* </div> */}
+            </MainBlock>
+            {/* </main> */}
         </>
     );
 }
