@@ -25,22 +25,22 @@ export const HeaderBlock = styled.div`
   padding: 0 10px;
 `;
 
-export const LogoWrapper = styled.div`
-  display: none;
+// export const LogoWrapper = styled.div`
+//   display: none;
   
-  &.show {
-    display: block;
-  }
+//   &.show {
+//     display: block;
+//   }
   
-  &.dark {
-    display: block;
-  }
-`;
+//   &.dark {
+//     display: block;
+//   }
+// `;
 
-export const Logo = styled.img`
-  width: 85px;
-  /* height: auto; */
-`;
+// export const Logo = styled.img`
+//   width: 85px;
+//   /* height: auto; */
+// `;
 
 export const HeaderNav = styled.nav`
   max-width: 290px;
@@ -50,37 +50,67 @@ export const HeaderNav = styled.nav`
   justify-content: center;
 `;
 
-export const MainButton = styled.button`
-  width: 178px;
-  height: 30px;
-  border-radius: 4px;
-  background-color: #565EEF;
-  color: #FFFFFF;
-  border: none;
-  font-size: 14px;
-  line-height: 1;
-  font-weight: 500;
-  margin-right: 20px;
+// const Button = styled.button`
+//   width: 178px;
+//   height: 30px;
+//   border-radius: 4px;
+//   background-color: #565EEF;
+//   color: #FFFFFF;
+//   border: none;
+//   font-size: 14px;
+//   line-height: 1;
+//   font-weight: 500;
+//   margin-right: 20px;
+//   ${props => props.hover && `
+//       ._hover01 {
+//       background-color: #33399b;
+//     }
+//  `}
 
-  &:hover {
-    background-color: #33399b;
-  }
-`;
+// `;
 
-export const UserLink = styled.a`
-  height: 20px;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  line-height: 20px;
-  color: #565EEF;
+// export const HeaderButton = ({ hover01 }) => (
+//  <Button hover={hover01} id="btnMainNew">
+//  </Button>
+// );
 
-  &:hover {
-    color: #33399b;
-  }
-`;
+// export default HeaderButton;
+
+
+
+
+
+// export const MainButton = styled.button`
+//   width: 178px;
+//   height: 30px;
+//   border-radius: 4px;
+//   background-color: #565EEF;
+//   color: #FFFFFF;
+//   border: none;
+//   font-size: 14px;
+//   line-height: 1;
+//   font-weight: 500;
+//   margin-right: 20px;
+
+//   &:hover {
+//     background-color: #33399b;
+//   }
+// `;
+
+// export const UserLink = styled.a`
+//   height: 20px;
+//   display: flex;
+//   flex-wrap: nowrap;
+//   align-items: center;
+//   justify-content: center;
+//   font-size: 14px;
+//   line-height: 20px;
+//   color: #565EEF;
+
+//   &:hover {
+//     color: #33399b;
+//   }
+// `;
 
 
 

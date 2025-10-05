@@ -21,11 +21,8 @@ const Header = () => {
     return (
         <>
             <StyledHeader>
-            {/* <header class="header"> */}
 			    <Container>
-                {/* <div class="container"> */}
-                    {/* <HeaderBlock> */}
-                    <div class="header__block">
+                    <HeaderBlock>
                         {/* <LogoWrapper> */}
                         <div class="header__logo _show _light">
                         
@@ -37,21 +34,18 @@ const Header = () => {
                             <a href="" target="_self"><img src="images/logo_dark.png" alt="logo" /></a>
                         {/* </Logo> */}
                         </div>
-                        {/* <HeaderNav> */}
-                        <nav class="header__nav">
+                        <HeaderNav>
                             {/* <MainButton>Создать новую задачу</MainButton> */}
+                            {/* <HeaderButton> */}
                             <button class="header__btn-main-new _hover01" id="btnMainNew"><a href="#popNewCard">Создать новую задачу</a></button>
+                            {/* </HeaderButton> */}
                             {/* <UserLink>Ivan Ivanov</UserLink> */}
                             <a href="#user-set-target" class="header__user _hover02" onClick={toggleShowModal}>Ivan Ivanov</a>
                             <PopUser show={showModal} onCloseButtonClick={toggleShowModal} />
-                        {/* </HeaderNav> */}
-                        </nav>					
-                    {/* </HeaderBlock> */}
-                    </div>
+                        </HeaderNav>
+                    </HeaderBlock>
 			    </Container>
-                {/* </div>			 */}
 		    </StyledHeader>
-            {/* </header> */}
         </>
     );
 }
