@@ -22,3 +22,14 @@ export const MainContent = styled.div`
   width: 100%;
   display: flex;
 `;
+
+export const MainLoading = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+`;

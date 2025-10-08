@@ -1,29 +1,42 @@
+import {
+  CardItem,
+  CardsCard,
+  CardGroup,
+  CardTheme,
+  CardContent,
+  CardTitle,
+  CardDate,
+  CardBtn,
+} from './CardsItem.styled';
+
 const CardsItem = ({id, theme, title, date}) => {
     const themeMap = {"Web Design":"orange", "Research":"green", "Copywriting":"purple"};
     const themeClass = themeMap[theme]
                 
         return (
         <>
-            <div class="cards__item">
-                <div class="cards__card card">
+            <CardItem>
+                <CardsCard>
                     <div>{id}</div>
-                    <div class="card__group">
-                        <div class={`card__theme _${themeClass}`}>
-                            <p class={`_${themeClass}`}> {theme} </p>
-                        </div>
+                    <CardGroup>
+                        <CardTheme>
+                        {/* <div class={`card__theme _${themeClass}`}> */}
+                            <p class={`_${themeClass}`}>{theme}</p>
+                        </CardTheme>
+                        {/* </div> */}
                         <a href="#popBrowse" target="_self">
-                            <div class="card__btn">
+                            <CardBtn>
                                 <div></div>
                                 <div></div>
                                 <div></div>
-                            </div>
+                            </CardBtn>
                         </a>
-                    </div>
-                    <div class="card__content">
+                    </CardGroup>
+                    <CardContent>
                         <a href="" target="_blank">
-                            <h3 class="card__title"> {title} </h3>
+                            <CardTitle> {title} </CardTitle>
                         </a>
-                        <div class="card__date">
+                        <CardDate>
                             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
                                 <g clipPath="url(#clip0_1_415)">
                                     <path d="M10.5625 2.03125H2.4375C1.7644 2.03125 1.21875 2.5769 1.21875 3.25V10.5625C1.21875 11.2356 1.7644 11.7812 2.4375 11.7812H10.5625C11.2356 11.7812 11.7812 11.2356 11.7812 10.5625V3.25C11.7812 2.5769 11.2356 2.03125 10.5625 2.03125Z" stroke="#94A6BE" strokeWidth="0.8" strokeLinejoin="round" />
@@ -36,10 +49,10 @@ const CardsItem = ({id, theme, title, date}) => {
                                 </defs>
                             </svg>
                             <p> {date} </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        </CardDate>
+                    </CardContent>
+                </CardsCard>
+            </CardItem>
         </>
         )
     }

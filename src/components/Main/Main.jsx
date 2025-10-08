@@ -14,7 +14,6 @@ const Main = () => {
         <>
             <MainBase>
                 <MainContainer>
-                    
                     <MainBlock>
                         <MainContent>
                             {columnHeaders.map((header, index) => (<Column key={`${header}_${index}`} header={header} cards={cardsList.filter((card) => card.status === header)}/>))}

@@ -4,6 +4,7 @@ import PopNewCard from "./components/PopUps/PopNewCard";
 import PopBrowse from "./components/PopUps/PopBrowse";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
+import { MainLoading } from './components/Main/Main.styled';
 import { useState, useEffect } from 'react';
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
         <PopNewCard />
         <PopBrowse />
         <Header />
-        {loading ? (<div class="main__loading">Данные загружаются...</div>) : (<Main loading={loading}/>)}
+        {loading ? (<MainLoading>Данные загружаются...</MainLoading>) : (<Main loading={loading}/>)}
       </div>
 
     <script src="js/script.js"></script>
