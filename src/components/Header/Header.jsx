@@ -4,11 +4,7 @@ import {
   StyledHeader,
   Container,
   HeaderBlock,
-  LogoWrapper,
-  Logo,
   HeaderNav,
-  MainButton,
-  UserLink
 } from './Header.styled';
 
 const Header = () => {
@@ -36,7 +32,7 @@ const Header = () => {
                         </div>
                         <HeaderNav>
                             {/* <MainButton>Создать новую задачу</MainButton> */}
-                            {/* <HeaderButton> */}
+                            {/* <HeaderButton hover> */}
                             <button class="header__btn-main-new _hover01" id="btnMainNew"><a href="#popNewCard">Создать новую задачу</a></button>
                             {/* </HeaderButton> */}
                             {/* <UserLink>Ivan Ivanov</UserLink> */}

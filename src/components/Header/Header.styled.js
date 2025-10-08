@@ -61,17 +61,16 @@ export const HeaderNav = styled.nav`
 //   line-height: 1;
 //   font-weight: 500;
 //   margin-right: 20px;
-//   ${props => props.hover && `
-//       ._hover01 {
+//   ${props => props.hover01 && `
+//       &:hover01 {
 //       background-color: #33399b;
 //     }
 //  `}
 
 // `;
 
-// export const HeaderButton = ({ hover01 }) => (
-//  <Button hover={hover01} id="btnMainNew">
-//  </Button>
+// const HeaderButton = ({ hover01 }) => (
+//  <Button hover01={hover01} id="btnMainNew"></Button>
 // );
 
 // export default HeaderButton;
