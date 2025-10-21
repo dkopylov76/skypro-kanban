@@ -1,39 +1,46 @@
+// import { useState } from "react";
+import PopUser from "./PopUser";
 import {
   PopExitMain,
   PopExitContainer,
   PopExitBlock,
   PopExitTtl,
   PopExitForm,
+  PopExitYes,
+  PopExitNo,
 } from './PopExit.styled';
 
-const PopExit = () => {
+
+const PopExit = ( {show} ) => {
+	// const [showPopExitModal, setShowPopExitModal] = useState(false);
+	
+	// 	const toggleShowPopExitModal = () => {
+	// 		setShowPopExitModal(!showPopExitModal);
+	// 	};
+
+	if (!show) {
+		return null;
+	}
+
     return (
         <>
-            <PopExitMain>
-			{/* <div className="pop-exit" id="popExit"> */}
+            <PopExitMain show={show}>
 				<PopExitContainer>
-				{/* <div className="pop-exit__container"> */}
 					<PopExitBlock>
-					{/* <div className="pop-exit__block"> */}
-						<PopExitTtl>
-						{/* <div className="pop-exit__ttl"> */}
-							<h2>Выйти из аккаунта?</h2>
-						</PopExitTtl>
-						{/* </div> */}
+						<PopExitTtl>Выйти из аккаунта?</PopExitTtl>
 						<PopExitForm>
 						{/* <form className="pop-exit__form" id="formExit" action="#"> */}
 							{/* <div className="pop-exit__form-group"> */}
-								<button className="pop-exit__exit-yes _hover01" id="exitYes"><a href="modal/signin.html">Да, выйти</a> </button>
-								<button className="pop-exit__exit-no _hover03" id="exitNo"><a href="main.html">Нет, остаться</a> </button>
+								<PopExitYes><a href="modal/signin.html">Да, выйти</a></PopExitYes>
+								{/* <button className="pop-exit__exit-yes _hover01" id="exitYes"><a href="modal/signin.html">Да, выйти</a> </button> */}
+								<PopExitNo><a href="main.html">Нет, остаться</a></PopExitNo>
+								{/* <button className="pop-exit__exit-no _hover03" id="exitNo"><a href="main.html">Нет, остаться</a> </button> */}
 							{/* </div> */}
 						</PopExitForm>
-						{/* </form> */}
 					</PopExitBlock>
-					{/* </div> */}
 				</PopExitContainer>
-				{/* </div> */}
 			</PopExitMain>
-			{/* </div> */}
+			{/* <PopExit show={showModal} onExitButtonClick={toggleShowModal} /> */}
         </>
     );
 }

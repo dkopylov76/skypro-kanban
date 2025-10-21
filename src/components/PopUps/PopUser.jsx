@@ -1,7 +1,24 @@
-const PopUser = ({ show, onCloseButtonClick }) => {
+import { useState } from "react";
+// import PopExit from "./PopExit";
+
+const PopUser = ({ show, onCloseButtonClick, onExitButtonClick }) => {
+
+    const [showPopUserModal, setShowPopUserModal] = useState(false);
+    // const [showPopExitModal, setShowPopExitModal] = useState(false);
+    
+        const toggleShowPopUserModal = () => {
+            setShowPopUserModal(!showPopUserModal);
+        };
+
+        // const toggleShowPopExitModal = () => {
+        //     setShowPopExitModal(!showPopExitModal);
+        // };
+
     if (!show) {
         return null;
     }
+
+
     
     return (
         <>
@@ -14,10 +31,19 @@ const PopUser = ({ show, onCloseButtonClick }) => {
                     <input type="checkbox" className="checkbox" name="checkbox" />
                 </div>
                 <button onClick={onCloseButtonClick}>Закрыть</button>
-                <button type="button" className="_hover03"><a href="#popExit">Выйти</a></button>
+                <button type="button" className="_hover03" onClick={onExitButtonClick}>Выйти</button>
+                {/* <PopUser show={showModal} onCloseButtonClick={toggleShowModal} /> */}
+                <PopUser show={showPopUserModal} onCloseButtonClick={toggleShowPopUserModal} onExitButtonClick={toggleShowPopUserModal} />
+                {/* <PopExit show={showPopExitModal} onExitButtonClick={toggleShowPopExitModal} /> */}
+                    {/* <a href="#popExit">Выйти</a></button> */}
             </div>
         </>
     );
 };
 
 export default PopUser;
+
+
+// onCloseButtonClick,
+// type="button" className="_hover03" 
+// onExitButtonClick={toggleShowPopUserModal}

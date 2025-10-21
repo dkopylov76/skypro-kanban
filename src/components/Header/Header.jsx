@@ -10,10 +10,10 @@ import {
 } from './Header.styled';
 
 const Header = () => {
-    const [showModal, setShowModal] = useState(false);
+    const [showPopUserModal, setShowPopUserModal] = useState(false);
 
-    const toggleShowModal = () => {
-        setShowModal(!showModal);
+    const toggleShowPopUserModal = () => {
+        setShowPopUserModal(!showPopUserModal);
     };
 
     return (
@@ -34,8 +34,11 @@ const Header = () => {
                         <HeaderNav>
                             <HeaderButton><a href="#popNewCard">Создать новую задачу</a></HeaderButton>
                             {/* <button class="header__btn-main-new _hover01" id="btnMainNew"><a href="#popNewCard">Создать новую задачу</a></button> */}
-                            <a href="#user-set-target" class="header__user _hover02" onClick={toggleShowModal}>Ivan Ivanov</a>
-                            <PopUser show={showModal} onCloseButtonClick={toggleShowModal} />
+                            <a href="#user-set-target" class="header__user _hover02" onClick={toggleShowPopUserModal}>Ivan Ivanov</a>
+                            <PopUser show={showPopUserModal} onCloseButtonClick={toggleShowPopUserModal} />
+                            {/* <PopExit show={showModal} onExitButtonClick={toggleShowModal} /> */}
+                            {/* <PopUser show={showModal} onExitButtonClick={toggleShowModal} /> */}
+                            {/* <PopExit show={showModal} onExitButtonClick={toggleShowModal} /> */}
                         </HeaderNav>
                     </HeaderBlock>
 			    </Container>

@@ -1,14 +1,25 @@
 import CalendarContent from "../Calendar/CalendarContent";
 import CalendarNav from "../Calendar/CalendarNav";
+import {
+  PopNewCardMain,
+  PopNewCardContainer,
+  PopNewCardBlock,
+  PopNewCardContent,
+  PopNewCardTtl,
+} from './PopNewCard.styled';
 
 const PopNewCard = () => {
     return (
         <>
-            <div className="pop-new-card" id="popNewCard">
-				<div className="pop-new-card__container">
-					<div className="pop-new-card__block">
-						<div className="pop-new-card__content">
-							<h3 className="pop-new-card__ttl">Создание задачи</h3>
+            <PopNewCardMain>
+			{/* <div className="pop-new-card" id="popNewCard"> */}
+				<PopNewCardContainer>
+				{/* <div className="pop-new-card__container"> */}
+					<PopNewCardBlock>
+					{/* <div className="pop-new-card__block"> */}
+						<PopNewCardContent>
+						{/* <div className="pop-new-card__content"> */}
+							<PopNewCardTtl>Создание задачи</PopNewCardTtl>
 							<a href="#" className="pop-new-card__close">&#10006;</a>
 							<div className="pop-new-card__wrap">
 								<form className="pop-new-card__form form-new" id="formNewCard" action="#">
@@ -48,10 +59,14 @@ const PopNewCard = () => {
 								</div>
 							</div>
 							<button className="form-new__create _hover01" id="btnCreate">Создать задачу</button>
-						</div>
-					</div>
-				</div>
-			</div>
+						</PopNewCardContent>
+						{/* </div> */}
+					</PopNewCardBlock>
+					{/* </div> */}
+				</PopNewCardContainer>
+				{/* </div> */}
+			</PopNewCardMain>
+			{/* </div> */}
         </>
     );
 }
