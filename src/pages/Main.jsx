@@ -1,18 +1,24 @@
+import styled from "styled-components";
+import { Outlet } from "react-router-dom";
+import Header from "../components/Header/Header";
 import Main from "../components/Main/Main";
-// import PopUser from "../components/PopUps/PopUser";
+import Column from "../components/Column/Column";
+import CardsItem from "../components/Card/CardsItem";
 
-const MainPage = () => {
-    // const [showModal, setShowModal] = useState(false);
-    
-    //     const toggleShowModal = () => {
-    //         setShowModal(!showModal);
-    //     };
+const Container = styled.div`
+    width: 100vw;
+`;
 
+const MainPage = ({ loading }) => {
     return (
-    <>
-        <Main />
-    </>
-    )
+        <Container>
+            <Header />
+            <Main loading={loading} />
+            <Column />
+            <CardsItem />
+            <Outlet />
+        </Container>
+    );
 };
 
 export default MainPage;

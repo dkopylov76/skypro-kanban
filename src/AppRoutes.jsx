@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import MainPage from "./pages/Main";
 import LoginPage from "./pages/Login";
@@ -16,21 +16,22 @@ function AppRoutes() {
     }, []);
 
     return (
-        <Router>
             <Routes>
                 {/* Главная страница */}
-                <Route path="/" element={<MainPage loading={loading} />} />
-                {/* Страница входа */}
-                <Route path="/login" element={<LoginPage />} />
-                {/* Страница регистрации */}
-                <Route path="/register" element={<RegisterPage />} />
-                {/* Новая карточка */}
-                <Route path="/card" element={<NewCardPage />} />
-                {/* Страница выхода */}
-                <Route path="/exit" element={<ExitPage />} />
+                <Route path="/" element={<MainPage loading={loading} />}>
+                </Route>
             </Routes>
-        </Router>
     );
 }
 
 export default AppRoutes;
+
+
+// {/* Страница входа */}
+//                     <Route path="/login" element={<LoginPage />} />
+//                     {/* Страница регистрации */}
+//                     <Route path="/register" element={<RegisterPage />} />
+                    // {/* Страница выхода */}
+                    // <Route path="/exit" element={<ExitPage />} />
+                    // {/* Новая карточка */}
+                    // <Route path="/card" element={<NewCardPage />} />

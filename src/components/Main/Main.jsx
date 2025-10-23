@@ -6,17 +6,21 @@ import {
 } from './Main.styled';
 import Column from "../Column/Column";
 import cardsList from "/src/data.js";
+import { useState } from 'react';
 
-const columnHeaders = ["Без статуса", "В работе", "Нужно сделать", "Тестирование", "Готово"]
+const columnHeaders = ["Без статуса", "In Work", "Нужно сделать", "Тестирование", "Готово"]
 
 const Main = () => {
+    const [cards, setCards] = useState(cardsList)
+    
+        // console.log(cardsList);
     return (
         <>
             <MainBase>
                 <MainContainer>
                     <MainBlock>
                         <MainContent>
-                            {columnHeaders.map((header, index) => (<Column key={`${header}_${index}`} header={header} cards={cardsList.filter((card) => card.status === header)}/>))}
+                            {columnHeaders.map((header, index) => (<Column key={`${header}_${index}`} header={header} cards={cards.filter((card) => card.status === header)}/>))}
                         </MainContent>
                     </MainBlock>
                 </MainContainer>

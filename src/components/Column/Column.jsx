@@ -5,8 +5,9 @@ import {
 } from './Column.styled';
 import CardsItem from "../Card/CardsItem";
 
-const Column = ({header, cards}) => {
-    
+const Column = ({header, cards=[]}) => {
+    console.log(cards);
+
     return (
         <>
             <MainColumn>
