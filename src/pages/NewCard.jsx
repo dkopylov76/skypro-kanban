@@ -1,7 +1,11 @@
 import PopNewCard from "../components/PopUps/PopNewCard";
 
 const NewCardPage = () => {
-    return <PopNewCard />;
+    return (
+    <>
+        <PopNewCard />;
+    </>
+    )
 };
 
 export default NewCardPage;

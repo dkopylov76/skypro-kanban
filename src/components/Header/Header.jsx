@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import PopUser from "../PopUps/PopUser";
 import {
   StyledHeader,
@@ -7,6 +8,7 @@ import {
   HeaderLogo,
   HeaderNav,
   HeaderButton,
+  HeaderUser,
 } from './Header.styled';
 
 const Header = () => {
@@ -21,24 +23,11 @@ const Header = () => {
             <StyledHeader>
 			    <Container>
                     <HeaderBlock>
-                        <HeaderLogo>
-                        {/* <div class="header__logo _show _light"> */}
-                            <a href="" target="_self"><img src="images/logo.png" alt="logo" /></a>
-                        </HeaderLogo>
-                        {/* </div> */}
-                        <HeaderLogo>
-                        {/* <div class="header__logo _dark"> */}
-                            <a href="" target="_self"><img src="images/logo_dark.png" alt="logo" /></a>
-                        </HeaderLogo>
-                        {/* </div> */}
+                        <HeaderLogo src="../images/logo.png" alt="logo" />
                         <HeaderNav>
-                            <HeaderButton><a href="#popNewCard">Создать новую задачу</a></HeaderButton>
-                            {/* <button class="header__btn-main-new _hover01" id="btnMainNew"><a href="#popNewCard">Создать новую задачу</a></button> */}
-                            <a href="#user-set-target" class="header__user _hover02" onClick={toggleShowPopUserModal}>Ivan Ivanov</a>
+                            <HeaderButton to="/card">Создать новую задачу</HeaderButton>
+                            <HeaderUser href="#user-set-target" onClick={toggleShowPopUserModal}>Ivan Ivanov</HeaderUser>
                             <PopUser show={showPopUserModal} onCloseButtonClick={toggleShowPopUserModal} />
-                            {/* <PopExit show={showModal} onExitButtonClick={toggleShowModal} /> */}
-                            {/* <PopUser show={showModal} onExitButtonClick={toggleShowModal} /> */}
-                            {/* <PopExit show={showModal} onExitButtonClick={toggleShowModal} /> */}
                         </HeaderNav>
                     </HeaderBlock>
 			    </Container>

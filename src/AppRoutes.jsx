@@ -5,6 +5,7 @@ import LoginPage from "./pages/Login";
 import RegisterPage from "./pages/Register";
 import NewCardPage from "./pages/NewCard";
 import ExitPage from "./pages/Exit";
+import PopBrowse from "./components/PopUps/PopBrowse";
 
 function AppRoutes() {
     const [loading, setLoading] = useState(true);
@@ -19,7 +20,17 @@ function AppRoutes() {
             <Routes>
                 {/* Главная страница */}
                 <Route path="/" element={<MainPage loading={loading} />}>
+                    {/* Страница выхода */}
+                    <Route path="/exit" element={<ExitPage />} />
+                    {/* Новая карточка */}
+                    <Route path="/card" element={<NewCardPage />} />
+                    {/* карточка */}
+                    <Route path="/card/:id" element={<PopBrowse />} />
                 </Route>
+                {/* Страница входа */}
+                <Route path="/login" element={<LoginPage />} />
+                {/* Страница регистрации */}
+                <Route path="/register" element={<RegisterPage />} />
             </Routes>
     );
 }
@@ -27,11 +38,4 @@ function AppRoutes() {
 export default AppRoutes;
 
 
-// {/* Страница входа */}
-//                     <Route path="/login" element={<LoginPage />} />
-//                     {/* Страница регистрации */}
-//                     <Route path="/register" element={<RegisterPage />} />
-                    // {/* Страница выхода */}
-                    // <Route path="/exit" element={<ExitPage />} />
-                    // {/* Новая карточка */}
-                    // <Route path="/card" element={<NewCardPage />} />
+

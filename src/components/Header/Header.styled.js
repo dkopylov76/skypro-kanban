@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
@@ -25,7 +26,7 @@ export const HeaderBlock = styled.div`
   padding: 0 10px;
 `;
 
-export const HeaderLogo = styled.div`
+export const HeaderLogo = styled.img`
   & > img {
     width: 250px;
   }
@@ -42,7 +43,7 @@ export const HeaderNav = styled.nav`
   justify-content: center;
 `;
 
-export const HeaderButton = styled.button`
+export const HeaderButton = styled(Link)`
   width: 178px;
   height: 30px;
   border-radius: 4px;
@@ -53,10 +54,20 @@ export const HeaderButton = styled.button`
   line-height: 1;
   font-weight: 500;
   margin-right: 20px;
+  padding-left: 14px;
+  align-content: center;
   &:hover {
     background-color: #33399b;
   }
-  & > a {
-    color: #FFFFFF;
-  }
+`;
+
+export const HeaderUser = styled.a`
+  height: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 20px;
+  color: #565EEF;
 `;

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const PopExitMain = styled.div`
@@ -52,7 +53,7 @@ export const PopExitForm = styled.div`
     justify-content: space-between;
 `;
 
-export const PopExitYes = styled.button`
+export const PopExitYes = styled(Link)`
     width: 153px;
     height: 30px;
     background-color: #565EEF;
@@ -81,7 +82,7 @@ export const PopExitYes = styled.button`
     }
 `;
 
-export const PopExitNo = styled.button`
+export const PopExitNo = styled(Link)`
     width: 153px;
     height: 30px;
     background-color: transparent;
@@ -95,19 +96,9 @@ export const PopExitNo = styled.button`
     line-height: 21px;
     font-weight: 500;
     letter-spacing: -0.14px;
-    color: #FFFFFF;
+    color: #565EEF;
     &:hover {
         background-color: #33399b;
-    }
-    & > a {
-        width: 100%;
-        height: 100%;
-        color: #565EEF;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        &:hover {
-            color: #FFFFFF;
-        }
+        color: #FFFFFF;
     }
 `;

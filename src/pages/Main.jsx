@@ -14,8 +14,6 @@ const MainPage = ({ loading }) => {
         <Container>
             <Header />
             <Main loading={loading} />
-            <Column />
-            <CardsItem />
             <Outlet />
         </Container>
     );

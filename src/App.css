@@ -739,7 +739,7 @@ body {
   align-items: center;
   justify-content: center;
 } */
-.header__btn-main-new {
+/* .header__btn-main-new {
   width: 178px;
   height: 30px;
   border-radius: 4px;
@@ -753,8 +753,8 @@ body {
 }
 .header__btn-main-new a {
   color: #FFFFFF;
-}
-.header__user {
+} */
+/* .header__user {
   height: 20px;
   display: flex;
   flex-wrap: nowrap;
@@ -763,7 +763,7 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #565EEF;
-}
+} */
 .header__user::after {
   content: "";
   display: block;

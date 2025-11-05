@@ -8,7 +8,7 @@ import Column from "../Column/Column";
 import cardsList from "/src/data.js";
 import { useState } from 'react';
 
-const columnHeaders = ["Без статуса", "In Work", "Нужно сделать", "Тестирование", "Готово"]
+const columnHeaders = ["Без статуса", "В работе", "Нужно сделать", "Тестирование", "Готово"]
 
 const Main = () => {
     const [cards, setCards] = useState(cardsList)

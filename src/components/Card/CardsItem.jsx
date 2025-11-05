@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import {
   CardItem,
   CardsCard,
@@ -14,7 +15,7 @@ const CardsItem = ({id, theme, title, date}) => {
     const themeClass = themeMap[theme]
                 
         return (
-        <>
+        <Link to={`/card/${id}`}>
             <CardItem>
                 <CardsCard>
                     <div>{id}</div>
@@ -53,7 +54,7 @@ const CardsItem = ({id, theme, title, date}) => {
                     </CardContent>
                 </CardsCard>
             </CardItem>
-        </>
+        </Link>
         )
     }
 

@@ -19,13 +19,13 @@ const PopNewCard = () => {
 					{/* <div className="pop-new-card__block"> */}
 						<PopNewCardContent>
 						{/* <div className="pop-new-card__content"> */}
-							<PopNewCardTtl>Создание задачи</PopNewCardTtl>
+							<PopNewCardTtl href="#">Создание задачи</PopNewCardTtl>
 							<a href="#" className="pop-new-card__close">&#10006;</a>
 							<div className="pop-new-card__wrap">
 								<form className="pop-new-card__form form-new" id="formNewCard" action="#">
 									<div className="form-new__block">
 										<label htmlFor="formTitle" className="subttl">Название задачи</label>
-										<input className="form-new__input" type="text" name="name" id="formTitle" placeholder="Введите название задачи..." autofocus />
+										<input className="form-new__input" type="text" name="name" id="formTitle" placeholder="Введите название задачи..." />
 									</div>
 									<div className="form-new__block">
 										<label htmlFor="textArea" className="subttl">Описание задачи</label>
