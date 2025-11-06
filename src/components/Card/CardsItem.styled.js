@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const CardItem = styled.div`
@@ -97,4 +98,9 @@ export const CardBtn = styled.div`
     border-radius: 50%;
     background-color: #94A6BE;
   }
+`;
+
+export const CardThemeA = styled(Link)`
+    text-decoration: none;
+    cursor: pointer;
 `;

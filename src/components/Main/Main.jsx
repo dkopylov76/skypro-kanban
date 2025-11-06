@@ -11,7 +11,7 @@ import { useState } from 'react';
 const columnHeaders = ["Без статуса", "В работе", "Нужно сделать", "Тестирование", "Готово"]
 
 const Main = () => {
-    const [cards, setCards] = useState(cardsList)
+    const [cards] = useState(cardsList)
     
         // console.log(cardsList);
     return (
@@ -30,3 +30,5 @@ const Main = () => {
 }
 
 export default Main;
+
+// , setCards

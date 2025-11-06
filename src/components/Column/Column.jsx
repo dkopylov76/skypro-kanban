@@ -6,7 +6,7 @@ import {
 import CardsItem from "../Card/CardsItem";
 
 const Column = ({header, cards=[]}) => {
-    console.log(cards);
+    // console.log(cards);
 
     return (
         <>

@@ -1,7 +1,7 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const PopNewCardMain = styled.div`
-    display: none;
     width: 100%;
     min-width: 375px;
     height: 100%;
@@ -47,4 +47,176 @@ export const PopNewCardTtl = styled.h3`
     font-weight: 600;
     line-height: 24px;
     margin-bottom: 20px;
+`;
+
+export const PopNewCardClose = styled(Link)`
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #94A6BE;
+    cursor: pointer;
+    &:hover {
+        color: #000000;
+    }
+`;
+
+export const PopNewCardWrap = styled.div`
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+`;
+
+export const PopNewCardForm = styled.form`
+    max-width: 370px;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+`;
+
+export const FormNewBlock = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+export const FormSubttl = styled.label`
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+`;
+
+export const FormNewInput = styled.input`
+    width: 100%;
+    outline: none;
+    padding: 14px;
+    background: transparent;
+    border: 0.7px solid rgba(148, 166, 190, 0.4);
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: -0.14px;
+    margin: 20px 0;
+`;
+
+export const FormNewArea = styled.textarea`
+    width: 100%;
+    outline: none;
+    padding: 14px;
+    background: transparent;
+    border: 0.7px solid rgba(148, 166, 190, 0.4);
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: -0.14px;
+    max-width: 370px;
+    margin-top: 14px;
+    height: 200px;
+`;
+
+export const PopNewCardCalendar = styled.div`
+    width: 182px;
+    margin-bottom: 20px;
+`;
+
+export const CalendarTtl = styled.p`
+    margin-bottom: 14px;
+    padding: 0 7px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+`;
+
+export const CalendarBlock = styled.div`
+    display: block;
+`;
+
+export const CalendarPeriod = styled.div`
+    padding: 0 7px;
+`;
+
+export const CalendarP = styled.p`
+    color: #94A6BE;
+    font-size: 10px;
+    line-height: 1;
+`;
+
+export const Categories = styled.div`
+    margin-bottom: 20px;
+`;
+
+export const CategoriesP = styled.p`
+    margin-bottom: 14px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+`;
+
+export const CategoriesThemes = styled.div`
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+`;
+
+export const CategoriesThemeP = styled.p`
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 14px;
+    white-space: nowrap;
+`;
+
+export const CategoriesThemeOrange = styled.div`
+    display: inline-block;
+    width: auto;
+    height: 30px;
+    padding: 8px 20px;
+    border-radius: 24px;
+    margin-right: 7px;
+    opacity: 0.4;
+    background-color: #FFE4C2;
+    color: #FF6D00;
+    opacity: 1 !important;
+`;
+
+export const CategoriesThemeGreen = styled.div`
+    display: inline-block;
+    width: auto;
+    height: 30px;
+    padding: 8px 20px;
+    border-radius: 24px;
+    margin-right: 7px;
+    opacity: 0.4;
+    background-color: #B4FDD1;
+    color: #06B16E;
+`;
+
+export const CategoriesThemePurple = styled.div`
+    display: inline-block;
+    width: auto;
+    height: 30px;
+    padding: 8px 20px;
+    border-radius: 24px;
+    margin-right: 7px;
+    opacity: 0.4;
+    background-color: #E9D4FF;
+    color: #9A48F1;
+`;
+
+export const FormNewCreate = styled.button`
+    width: 132px;
+    height: 30px;
+    background-color: #565EEF;
+    border-radius: 4px;
+    border: 0;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    color: #FFFFFF;
+    float: right;
+    &:hover {
+        background-color: #33399b;
+    }
 `;

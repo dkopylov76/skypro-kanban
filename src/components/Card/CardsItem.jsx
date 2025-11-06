@@ -8,6 +8,7 @@ import {
   CardTitle,
   CardDate,
   CardBtn,
+  CardThemeA,
 } from './CardsItem.styled';
 
 const CardsItem = ({id, theme, title, date}) => {
@@ -22,21 +23,23 @@ const CardsItem = ({id, theme, title, date}) => {
                     <CardGroup>
                         <CardTheme>
                         {/* <div class={`card__theme _${themeClass}`}> */}
-                            <p class={`_${themeClass}`}>{theme}</p>
+                            <p className={`_${themeClass}`}>{theme}</p>
                         </CardTheme>
                         {/* </div> */}
-                        <a href="#popBrowse" target="_self">
+                        {/* <CardThemeA href="#popBrowse" target="_self"> */}
+                        {/* <a href="#popBrowse" target="_self"> */}
                             <CardBtn>
                                 <div></div>
                                 <div></div>
                                 <div></div>
                             </CardBtn>
-                        </a>
+                        {/* </CardThemeA> */}
+                        {/* </a> */}
                     </CardGroup>
                     <CardContent>
-                        <a href="" target="_blank">
+                        {/* <a href="" target="_blank"> */}
                             <CardTitle> {title} </CardTitle>
-                        </a>
+                        {/* </a> */}
                         <CardDate>
                             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
                                 <g clipPath="url(#clip0_1_415)">
