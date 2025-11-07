@@ -5,8 +5,9 @@ import LoginPage from "./pages/Login";
 import RegisterPage from "./pages/Register";
 import NewCardPage from "./pages/NewCard";
 import ExitPage from "./pages/Exit";
-import PopBrowse from "./components/PopUps/PopBrowse";
+// import PopBrowse from "./components/PopUps/PopBrowse";
 import BrowseCardPage from "./pages/BrowseCard";
+import NotFoundPage from "./pages/NotFound";
 
 function AppRoutes() {
     const [loading, setLoading] = useState(true);
@@ -33,7 +34,7 @@ function AppRoutes() {
                 {/* Страница регистрации */}
                 <Route path="/register" element={<RegisterPage />} />
                 {/* Страница 404 */}
-                <Route path="\*" element={<NotFoundPage />} />
+                <Route path="*" element={<NotFoundPage />} />
             </Routes>
     );
 }

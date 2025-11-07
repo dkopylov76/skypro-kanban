@@ -1,5 +1,11 @@
+import NotFound from "../components/Main/404";
+
 const NotFoundPage = () => {
-   return <div>Страница не найдена</div>
+   return (
+      <>
+         <NotFound />
+      </>
+   )
 };
 
 export default NotFoundPage;

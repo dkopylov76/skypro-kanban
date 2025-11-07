@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header/Header";
 import Main from "../components/Main/Main";
-import Column from "../components/Column/Column";
-import CardsItem from "../components/Card/CardsItem";
+// import Column from "../components/Column/Column";
+// import CardsItem from "../components/Card/CardsItem";
 
 const Container = styled.div`
     width: 100vw;
