@@ -96,6 +96,20 @@ export const FormNewInput = styled.input`
     line-height: 1;
     letter-spacing: -0.14px;
     margin: 20px 0;
+    &::-moz-placeholder {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1px;
+        color: #94A6BE;
+        letter-spacing: -0.14px;
+    }
+    &::placeholder {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1px;
+        color: #94A6BE;
+        letter-spacing: -0.14px;
+    }
 `;
 
 export const FormNewArea = styled.textarea`
@@ -111,6 +125,20 @@ export const FormNewArea = styled.textarea`
     max-width: 370px;
     margin-top: 14px;
     height: 200px;
+    &::-moz-placeholder {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1px;
+        color: #94A6BE;
+        letter-spacing: -0.14px;
+    }
+    &::placeholder {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1px;
+        color: #94A6BE;
+        letter-spacing: -0.14px;
+    }
 `;
 
 export const PopNewCardCalendar = styled.div`

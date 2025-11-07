@@ -58,7 +58,7 @@ const PopNewCard = () => {
 									{/* <div className="form-new__block"> */}
 										<FormSubttl htmlFor="textArea">Описание задачи</FormSubttl>
 										{/* <label htmlFor="textArea" className="subttl">Описание задачи</label> */}
-										<FormNewArea name="text" id="textArea" placeholder="Введите описание задачи..." />
+										<FormNewArea type="text" name="text" id="textArea" placeholder="Введите описание задачи..." />
 										{/* <textarea className="form-new__area" name="text" id="textArea"  placeholder="Введите описание задачи..."></textarea> */}
 									</FormNewBlock>
 									{/* </div> */}

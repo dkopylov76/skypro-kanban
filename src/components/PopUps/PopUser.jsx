@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import {
+    HeaderPopUserSet,
+    PopUserSetName,
+    PopUserSetMail,
+    PopUserSetTheme,
+    PopUserSetThemeInput,
+    PopUserSetButton,
+} from './PopUser.styled';
 
 const PopUser = ({ show, onCloseButtonClick }) => {
 
@@ -15,18 +22,19 @@ const PopUser = ({ show, onCloseButtonClick }) => {
 
     return (
         <>
-            <div className="header__pop-user-set pop-user-set" id="user-set-target">
-                
-                <p className="pop-user-set__name">Ivan Ivanov</p>
-                <p className="pop-user-set__mail">ivan.ivanov@gmail.com</p>
-                <div className="pop-user-set__theme">
-                    <p>Темная тема</p>
-                    <input type="checkbox" className="checkbox" name="checkbox" />
-                </div>
-                <button onClick={onCloseButtonClick}>Закрыть</button>
-                <Link to="/exit">Выйти</Link>
+            <HeaderPopUserSet>
+                <PopUserSetName>Ivan Ivanov</PopUserSetName>
+                <PopUserSetMail>ivan.ivanov@gmail.com</PopUserSetMail>
+                <PopUserSetTheme>
+                    Темная тема
+                    <PopUserSetThemeInput type="checkbox" name="checkbox" />
+                    {/* <input type="checkbox" className="checkbox" name="checkbox" /> */}
+                    {/* <PopUserSetThemeInput type="checkbox" name="checkbox" /> */}
+                </PopUserSetTheme>
+                <PopUserSetButton onClick={onCloseButtonClick}>Закрыть</PopUserSetButton>
+                <PopUserSetButton to="/exit">Выйти</PopUserSetButton>
                 <PopUser show={showPopUserModal} onCloseButtonClick={toggleShowPopUserModal} onExitButtonClick={toggleShowPopUserModal} />
-            </div>
+            </HeaderPopUserSet>
         </>
     );
 };
