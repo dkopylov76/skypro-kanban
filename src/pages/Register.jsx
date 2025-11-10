@@ -1,15 +1,11 @@
-import PopUser from "../components/PopUps/PopUser";
+import Login from "../components/PopUps/Login";
 
 const RegisterPage = () => {
-    // const [showModal, setShowModal] = useState(false);
-    
-    //     const toggleShowModal = () => {
-    //         setShowModal(!showModal);
-    //     };
+
 
     return (
     <>
-        <PopUser />
+        <Login />
     </>
     )
 };

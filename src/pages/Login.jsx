@@ -1,17 +1,7 @@
-import PopExit from "../components/PopUps/PopExit";
+import Login from "../components/PopUps/Login";
 
-const LoginPage = () => {
-    // const [showModal, setShowModal] = useState(false);
-    
-    //     const toggleShowModal = () => {
-    //         setShowModal(!showModal);
-    //     };
-
-    return (
-    <>
-        <PopExit />
-    </>
-    )
+const LoginPage = ({ setIsAuth }) => {
+    return <Login setIsAuth={setIsAuth} />;
 };
 
 export default LoginPage;
