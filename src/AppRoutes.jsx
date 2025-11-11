@@ -1,7 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import MainPage from "./pages/Main";
-import SignInPage from "./pages/SignIn";
+import Login from "./components/PopUps/Login";
+// import Login from "./pages/Login";
 import RegisterPage from "./pages/Register";
 import NewCardPage from "./pages/NewCard";
 import ExitPage from "./pages/Exit";
@@ -23,7 +24,7 @@ function AppRoutes() {
             <Routes>
                 <Route element={<PrivateRoute isAuth={isAuth} />}>
                     {/* Главная страница */}
-                    <Route path="/" element={<MainPage setIsAuth={setIsAuth} loading={loading} />}>
+                    <Route path="/" element={<MainPage isAuth={isAuth} loading={loading} />}>
                         {/* Страница выхода */}
                         <Route path="/exit" element={<ExitPage />} />
                         {/* Новая карточка */}
@@ -33,9 +34,12 @@ function AppRoutes() {
                     </Route>
                 </Route>
                 {/* Страница входа */}
-                <Route path="/login" element={<SignInPage setIsAuth={setIsAuth} />} />
+                <Route path="/login" element={<Login isSignUp={false} setIsAuth={setIsAuth} />} />
+                {/* <Route path="/login" element={<SignInPage setIsAuth={setIsAuth} />} /> */}
                 {/* Страница регистрации */}
-                <Route path="/register" element={<RegisterPage />} />
+                <Route path="/register" element={<Login isSignUp={true} setIsAuth={setIsAuth} />}
+                    />
+                {/* <Route path="/register" element={<RegisterPage />} /> */}
 
         {/* <Route path="/" element={currentUser ? <Navigate to="/dashboard" /> : <AuthForm />} />
         <Route path="/dashboard" element={currentUser ? <Dashboard /> : <Navigate to="/" />} /> */}

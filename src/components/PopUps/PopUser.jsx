@@ -28,8 +28,6 @@ const PopUser = ({ show, onCloseButtonClick }) => {
                 <PopUserSetTheme>
                     Темная тема
                     <PopUserSetThemeInput type="checkbox" name="checkbox" />
-                    {/* <input type="checkbox" className="checkbox" name="checkbox" /> */}
-                    {/* <PopUserSetThemeInput type="checkbox" name="checkbox" /> */}
                 </PopUserSetTheme>
                 <PopUserSetButton onClick={onCloseButtonClick}>Закрыть</PopUserSetButton>
                 <PopUserSetButton to="/exit">Выйти</PopUserSetButton>

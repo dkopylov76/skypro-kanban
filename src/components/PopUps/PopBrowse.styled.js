@@ -119,9 +119,6 @@ export const PopBrowseBtnGroup = styled.div`
 `;
 
 export const BtnBrowse = styled(Link)`
-    /* height: 30px;
-    margin-bottom: 10px;
-    padding: 5px 14px; */
     cursor: pointer;
     outline: none;
     border-radius: 4px;
@@ -136,9 +133,6 @@ export const BtnBrowse = styled(Link)`
 `;
 
 export const BtnBrowseClose = styled(Link)`
-    /* height: 30px;
-    margin-bottom: 10px;
-    padding: 5px 14px; */
     cursor: pointer;
     outline: none;
     border-radius: 4px;

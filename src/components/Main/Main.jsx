@@ -12,8 +12,7 @@ const columnHeaders = ["Без статуса", "В работе", "Нужно �
 
 const Main = () => {
     const [cards] = useState(cardsList)
-    
-        // console.log(cardsList);
+
     return (
         <>
             <MainBase>
@@ -30,5 +29,3 @@ const Main = () => {
 }
 
 export default Main;
-
-// , setCards

@@ -104,7 +104,7 @@ export const LoginPass = styled.input`
     }
 `;
 
-export const LoginButton = styled(Link)`
+export const LoginButton = styled.button`
     width: 248px;
     height: 30px;
     display: flex;
@@ -130,7 +130,6 @@ export const LoginText = styled(Link)`
     font-size: 14px;
     font-weight: 400;
     line-height: 16px;
-    letter-spacing: -2%;
     text-align: center;
     cursor: pointer;
     outline: none;

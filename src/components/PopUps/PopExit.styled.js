@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const PopExitMain = styled.div`
-    /* display: none; */
     width: 100%;
     height: 100%;
     min-width: 320px;
@@ -26,7 +25,6 @@ export const PopExitContainer = styled.div`
 `;
 
 export const PopExitBlock = styled.div`
-    /* display: block; */
     margin: 0 auto;
     background-color: #FFFFFF;
     max-width: 370px;
