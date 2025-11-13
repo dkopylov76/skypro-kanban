@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const NotFoundBase = styled.div`
@@ -41,4 +42,17 @@ export const NotFoundText = styled.p`
     font-size: 16px;
     font-weight: 600;
     line-height: 1;
+`;
+
+export const NotFoundButton = styled(Link)`
+    width: 200px;
+    height: 30px;
+    padding: 8px 10px 8px 10px;
+    border-radius: 4px;
+    background: rgba(86, 94, 239, 1);
+    color: rgba(255, 255, 255, 1);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: center;
 `;
