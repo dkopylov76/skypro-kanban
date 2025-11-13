@@ -47,7 +47,7 @@ const cardsList = [
         title: "Разработка сайта",
         date: "26.09.25",
         status: "Готово",
-    },
+    }
 ]
 
 export default cardsList;
