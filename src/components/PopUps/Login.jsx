@@ -1,9 +1,9 @@
+import { signIn, signUp } from '../../services/auth';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
     LoginWrapper,
     LoginMain,
-    LoginContainer,
     LoginBlock,
     LoginTtl,
     LoginName,
@@ -11,71 +11,129 @@ import {
     LoginPass,
     LoginButton,
     LoginText,
+    LoginError,
 } from './Login.styled';
 
 const Login = ({ isSignUp, setIsAuth }) => {
     const navigate = useNavigate();
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [name, setName] = useState('');
+    const [formData, setFormData] = useState({
+        name: "",
+        login: "",
+        password: "",
+    });
 
-    const handleLogin = (e) => {
+    const [errors, setErrors] = useState({
+        name: false,
+        login: false,
+        password: false,
+    });
+
+    const [error, setError] = useState("");
+
+    const validateForm = () => {
+        const newErrors = { name: false, login: false, password: false };
+        let isValid = true;
+
+        if (isSignUp && !formData.name.trim()) {
+            newErrors.name = true;
+            isValid = false;
+        }
+
+        if (!formData.login.trim()) {
+            newErrors.login = true;
+            isValid = false;
+        }
+
+        if (!formData.password.trim()) {
+            newErrors.password = true;
+            isValid = false;
+        }
+
+        setErrors(newErrors);
+        if (!isValid) {
+            setError("Заполните все поля");
+        }
+        return isValid;
+    };
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value,
+        });
+        setErrors({ ...errors, [name]: false });
+        setError("");
+    };
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        if (!email || !password) {
-            alert('Пожалуйста, заполните все обязательные поля.');
+        if (!validateForm()) {
             return;
         }
-        setIsAuth(true);
-        navigate("/");
+    try {
+        const data = !isSignUp
+            ? await signIn({ login: formData.login, password: formData.password })
+            : await signUp(formData);
+
+        if (data) {
+            setIsAuth(true);
+            localStorage.setItem("userInfo", JSON.stringify(data));
+            navigate("/");
+        }
+        } catch (err) {
+            setError(err.message);
+        }
     };
 
     return (
         <LoginWrapper>
             <LoginMain>
-                <LoginContainer>
-                    <LoginBlock>
-                        <LoginTtl>{isSignUp ? "Регистрация" : "Вход"}</LoginTtl>
-                        <form onSubmit={handleLogin}>
-                            {isSignUp && (
-                                <LoginName
-                                    type="text"
-                                    name="name"
-                                    id="formname"
-                                    placeholder="Имя"
-                                    value={name}
-                                    onChange={(e) => setName(e.target.value)}
-                                />
-                            )}
-                            <LoginMail
-                                type="email"
-                                name="email"
-                                id="formmail"
-                                placeholder="Эл. почта"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                            />
-                            <LoginPass
-                                type="password"
-                                name="password"
-                                id="formpass"
-                                placeholder="Пароль"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                            />
-                            <LoginButton type='submit'>
-                                {isSignUp ? "Зарегистрироваться" : "Войти"}
-                            </LoginButton>
-                        </form>
-
-                        {!isSignUp && (
-                            <LoginText to="/register">Нужно зарегистрироваться? Регистрируйтесь здесь</LoginText>
-                        )}
+                <LoginBlock>
+                    <LoginTtl>{isSignUp ? "Регистрация" : "Вход"}</LoginTtl>
+                    <form onSubmit={handleSubmit}>
                         {isSignUp && (
-                            <LoginText to="/login">Уже есть аккаунт? Войдите здесь</LoginText>
+                            <LoginName
+                                $error={errors.name}
+                                type="text"
+                                name="name"
+                                id="name"
+                                placeholder="Имя"
+                                value={formData.name}
+                                onChange={handleChange}
+                            />
                         )}
-                        
-                    </LoginBlock>
-                </LoginContainer>
+                        <LoginMail
+                            $error={errors.login}
+                            type="text"
+                            name="login"
+                            id="login"
+                            placeholder="Эл. почта"
+                            value={formData.login}
+                            onChange={handleChange}
+                        />
+                        <LoginPass
+                            $error={errors.password}
+                            type="password"
+                            name="password"
+                            id="password"
+                            placeholder="Пароль"
+                            value={formData.password}
+                            onChange={handleChange}
+                        />
+                        <LoginButton type='submit'>
+                            {isSignUp ? "Зарегистрироваться" : "Войти"}
+                        </LoginButton>
+                    </form>
+
+                    {!isSignUp && (
+                        <LoginText to="/register">Нужно зарегистрироваться? Регистрируйтесь здесь</LoginText>
+                    )}
+                    {isSignUp && (
+                        <LoginText to="/login">Уже есть аккаунт? Войдите здесь</LoginText>
+                    )}
+                    <LoginError>{error}</LoginError>
+                </LoginBlock>
             </LoginMain>
         </LoginWrapper>
     );
