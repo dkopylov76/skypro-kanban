@@ -19,7 +19,7 @@ const Main = () => {
                 <MainContainer>
                     <MainBlock>
                         <MainContent>
-                            {columnHeaders.map((header, index) => (<Column key={`${header}_${index}`} header={header} cards={cards.filter((card) => card.status === header)}/>))}
+                            {columnHeaders.map((header, index) => (<Column key={`${header}_${index}`} header={header} cards={cards.filter((card) => card.status === header)} />))}
                         </MainContent>
                     </MainBlock>
                 </MainContainer>

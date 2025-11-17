@@ -18,7 +18,7 @@ export const LoginMain = styled.div`
     margin: 0 auto;
     max-width: 370px;
     width: 100%;
-    height: 329px;
+    height: 340px;
     display: flex;
     flex-direction: column;
     padding: 50px 60px 50px 60px;
@@ -29,15 +29,9 @@ export const LoginMain = styled.div`
     background: rgba(255, 255, 255, 1);
 `;
 
-export const LoginContainer = styled.div`
-    width: 248px;
-    height: 229px;
-    display: flex;
-`;
-
 export const LoginBlock = styled.div`
     width: 248px;
-    height: 30px;
+    min-height: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,7 +51,7 @@ export const LoginName = styled.input`
     padding: 8px 10px 8px 10px;
     margin-bottom: 7px;
     box-sizing: border-box;
-    border: 0.7px solid rgba(148, 166, 190, 0.4);
+    border: 0.7px solid ${props => props.$error ? 'red' : 'rgba(148, 166, 190, 0.4)'};
     border-radius: 8px;
     &::placeholder {
         font-size: 14px;
@@ -75,7 +69,7 @@ export const LoginMail = styled.input`
     padding: 8px 10px 8px 10px;
     margin-bottom: 7px;
     box-sizing: border-box;
-    border: 0.7px solid rgba(148, 166, 190, 0.4);
+    border: 0.7px solid ${props => props.$error ? 'red' : 'rgba(148, 166, 190, 0.4)'};
     border-radius: 8px;
     &::placeholder {
         font-size: 14px;
@@ -93,7 +87,7 @@ export const LoginPass = styled.input`
     padding: 8px 10px 8px 10px;
     margin-bottom: 20px;
     box-sizing: border-box;
-    border: 0.7px solid rgba(148, 166, 190, 0.4);
+    border: 0.7px solid ${props => props.$error ? 'red' : 'rgba(148, 166, 190, 0.4)'};
     border-radius: 8px;
     &::placeholder {
         font-size: 14px;
@@ -111,7 +105,7 @@ export const LoginButton = styled.button`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 8px 10px 8px 10px;
     border-radius: 4px;
     background: rgba(86, 94, 239, 1);
@@ -131,6 +125,16 @@ export const LoginText = styled(Link)`
     font-weight: 400;
     line-height: 16px;
     text-align: center;
+    margin-bottom: 7px;
     cursor: pointer;
     outline: none;
+`;
+
+export const LoginError = styled.p`
+    font-size: 20px;
+    color: red;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center;
 `;
