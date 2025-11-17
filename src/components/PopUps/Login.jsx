@@ -1,5 +1,5 @@
 import { signIn, signUp } from '../../services/auth';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
     LoginWrapper,
@@ -13,9 +13,12 @@ import {
     LoginText,
     LoginError,
 } from './Login.styled';
+import { LoginContext } from '../Context/LoginContext';
 
-const Login = ({ isSignUp, setIsAuth }) => {
+const Login = ({ isSignUp }) => {
     const navigate = useNavigate();
+    const { updateUserInfo } = useContext(LoginContext);
+
     const [formData, setFormData] = useState({
         name: "",
         login: "",
@@ -77,10 +80,15 @@ const Login = ({ isSignUp, setIsAuth }) => {
             : await signUp(formData);
 
         if (data) {
-            setIsAuth(true);
-            localStorage.setItem("userInfo", JSON.stringify(data));
+            updateUserInfo(data);
             navigate("/");
         }
+        
+        // if (data) {
+        //     setIsAuth(true);
+        //     localStorage.setItem("userInfo", JSON.stringify(data));
+        //     navigate("/");
+        // }
         } catch (err) {
             setError(err.message);
         }

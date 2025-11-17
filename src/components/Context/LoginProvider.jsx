@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { LoginContext } from "./LoginContext";
-import { checkLs } from "../utils/checkLs";
+import { checkLs } from "../../utils/checkLs";
+
 
 const LoginProvider = ({children}) => {
     const [user, setUser] = useState(checkLs());
