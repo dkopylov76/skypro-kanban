@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = 'https://wedev-api.sky.pro/api/user'
+const API_URL = 'https://wedev-api.sky.pro/api/tasks/'
 
 export async function fetchTasks({ token }) {
     try {
@@ -20,7 +20,7 @@ export async function postTask({ token, task }) {
         const data = await axios.post(API_URL, task, {
             headers: {
                 Authorization: 'Bearer ' + token,
-                "Content-Type": "text/html",
+                "Content-Type": "application/json",
             },
         });
         return data.data.tasks;
@@ -36,7 +36,7 @@ export async function getTask({ token, id }) {
                 Authorization: 'Bearer ' + token,
             },
         });
-        return data.data;
+        return data.data.tasks;
     } catch (error) {
         throw new Error(error.message)
     }
@@ -47,7 +47,7 @@ export async function editTask({ token, id, task }) {
         const data = await axios.patch(API_URL + id, task, {
             headers: {
                 Authorization: 'Bearer ' + token,
-                "Content-Type": "text/html",
+                "Content-Type": "application/json",
             },
         });
         return data.data.tasks;
@@ -58,7 +58,7 @@ export async function editTask({ token, id, task }) {
 
 export async function deleteTask({ token, id }) {
     try {
-        const data = await axios.patch(API_URL + id, {
+        const data = await axios.delete(API_URL + id, {
             headers: {
                 Authorization: 'Bearer ' + token,
                 "Content-Type": "text/html",

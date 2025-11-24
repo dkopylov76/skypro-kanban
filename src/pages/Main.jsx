@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { Outlet } from "react-router-dom";
+// import { TasksProvider } from "../context/TasksProvider";
+import { TasksProvider } from "../components/Context/TasksProvider";
 import Header from "../components/Header/Header";
 import Main from "../components/Main/Main";
 import { fetchTasks } from "../services/api";
@@ -33,11 +35,13 @@ const MainPage = () => {
     }, [getTasks]);
     
     return (
-        <Container>
-            <Header />
-            <Main loading={loading} tasks={tasks} error={errors} />
-            <Outlet />
-        </Container>
+        <TasksProvider>
+            <Container>
+                <Header />
+                <Main loading={loading} tasks={tasks} error={errors} />
+                <Outlet />
+            </Container>
+        </TasksProvider>
     );
 };
 

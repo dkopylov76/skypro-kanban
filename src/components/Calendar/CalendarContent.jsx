@@ -1,4 +1,7 @@
 const CalendarContent = () => {
+    const handleDayClick = (date) => {
+        onDateSelect(date); // например, "2025-11-25"
+    };
     return (
         <>
             <div className="calendar__content">

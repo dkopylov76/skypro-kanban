@@ -196,6 +196,8 @@ export const CategoriesThemeP = styled.p`
 `;
 
 export const CategoriesThemeOrange = styled.div`
+    background: ${props => props.$active ? '#FFA500' : '#FFE0B2'};
+    color: ${props => props.$active ? 'white' : '#D84315'};
     display: inline-block;
     width: auto;
     height: 30px;
@@ -209,6 +211,8 @@ export const CategoriesThemeOrange = styled.div`
 `;
 
 export const CategoriesThemeGreen = styled.div`
+    background: ${props => props.$active ? '#06B16E' : '#B4FDD1'};
+    color: ${props => props.$active ? 'white' : '#046922ff'};
     display: inline-block;
     width: auto;
     height: 30px;
@@ -221,6 +225,8 @@ export const CategoriesThemeGreen = styled.div`
 `;
 
 export const CategoriesThemePurple = styled.div`
+    background: ${props => props.$active ? '#9A48F1' : '#E9D4FF'};
+    color: ${props => props.$active ? 'white' : '#720a86ff'};
     display: inline-block;
     width: auto;
     height: 30px;

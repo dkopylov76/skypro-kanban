@@ -4,7 +4,7 @@ import { checkLs } from "../../utils/checkLs";
 
 
 const LoginProvider = ({children}) => {
-    const [user, setUser] = useState(checkLs());
+    const [user, setUser] = useState(() => checkLs());
 
     const updateUserInfo = (userData) => {
         setUser(userData);
